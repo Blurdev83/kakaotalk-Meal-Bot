@@ -127,7 +127,7 @@ def Message():
     elif content == u"내일의 급식은 무엇인가요?":
         dataSend = {
             'message': {
-                'text': "내일의 급식은, " + get_diet(2, datetime.date.today().strftime("20%y.%m.%d + 1"), datetime.datetime.now().weekday() + 1) + "입니다."
+                'text': "내일의 급식은, " + get_diet(2, datetime.date.today().strftime("20%y.%m.%d"), datetime.datetime.now().weekday() + 1) + "입니다."
             },
             'keyboard': {
                 'type': 'buttons',
