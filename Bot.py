@@ -14,7 +14,6 @@ def get_diet(code, ymd, weekday):
     if weekday == 5 or weekday == 6: #토요일, 일요일은..
         Meal_rep = "\nNull\n" # 급식 없어!
     else:
-        num = weekday + 1 # DB Array가 일요일부터 시작하므로 + 1..
         URL = (
                 "http://stu.ice.go.kr/sts_sci_md01_001.do?"
                 "schulCode=E100002026"
@@ -41,7 +40,7 @@ def get_diet(code, ymd, weekday):
         wed = tdtmp[3]
         thu = tdtmp[4]
         fri = tdtmp[5]
-        if (weekday == 0):
+        if (weekday == 0 or weekday == 7):
             tmp1 = str(mon)
         elif (weekday == 1):
             tmp1 = str(tue)
